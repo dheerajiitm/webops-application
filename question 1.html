@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This is to account for the change in page resolution -->
+
+<style>
+
+/* left, middle and right empty boxes to account for the free spaces */
+#leftemptybox {
+    float: left;
+    width: 10%;
+    min-height: 1px; /* Assigning a minimum height so that the container can be accomodated, to prevent the empty box from collapsing */
+}
+
+#leftbox {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    background-color: #20b2aa;
+    opacity: 0.5;
+}
+
+#middleemptybox {
+    float: left;
+    width: 10%;
+    min-height: 1px;/* Assigning a minimum height so that the container can be accomodated, to prevent the empty box from collapsing */
+}
+
+#rightbox {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(32,178,170,0.5);/*Assigning a colour using rgba format doesn't alter the opacity of the text*/
+}
+
+#rightemptybox {
+    float: left;
+    width: 10%;
+    min-height: 1px;/* Assigning a minimum height so that the container can be accomodated, to prevent the empty box from collapsing */
+}
+
+/* to make the containers stack on top of each other when the web page is resized */
+@media only screen and (max-width: 600px) {
+    #leftemptybox,
+    #leftbox,
+    #middleemptybox,
+    #rightbox,
+    #rightbox
+    {
+       float: none;
+       width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+  <div id="leftemptybox">
+  </div>
+  <div id="leftbox">
+  <p>Opacity = 0.5 for the whole box</p>
+  </div>
+  <div id="middleemptybox">
+  </div>
+  <div id="rightbox">
+  <p>Opacity = 0.5 only for the background</p>
+  </div>
+  <div id="rightemptybox">
+  </div>
+</div>
+
+
+</body>
+</html>
